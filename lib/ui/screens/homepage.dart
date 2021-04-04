@@ -13,18 +13,18 @@ class Homepage extends GetView<HomeController> {
           width: context.width,
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
-                height: 100,
-              ),
               GestureDetector(
                 onTap: () => Get.toNamed(Routes.QUIZHOME),
                 child: Card(
+                  elevation: 6,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                         vertical: 50, horizontal: 20),
                     child: Column(
-                      children: [Text("Theory Generator")],
+                      children: [Text("Theory Generator", style: Theme.of(context).textTheme.headline5,)],
                     ),
                   ),
                 ),

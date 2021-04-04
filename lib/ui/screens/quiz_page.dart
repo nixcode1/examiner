@@ -1,5 +1,6 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:examiner/data/controllers/quiz_controller.dart';
+import 'package:examiner/data/models/question.dart';
 import 'package:examiner/ui/widgets/question_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,7 +9,7 @@ class QuizPage extends GetView<QuizController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('QuizPage')),
+      appBar: AppBar(title: Text('Quiz page')),
       floatingActionButton: Obx(
         () => !controller.loaded
             ? SizedBox.shrink()
@@ -84,14 +85,13 @@ class QuizPage extends GetView<QuizController> {
                         height: context.height / 2,
                         child: ListView(
                           children: controller.questions
-                              .map((question) =>
-                                  QuestionCard(question: question))
+                              .map((QuestionModel question) =>
+                                  QuestionCard(question: question.title))
                               .toList(),
                         ),
                       )
                     : Center(child: CircularProgressIndicator()),
               ),
-              ElevatedButton(onPressed: () => controller.countDownController.getTime(), child: Text("Text"))
             ],
           ),
         ),
