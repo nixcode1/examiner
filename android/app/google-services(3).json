@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "339408757427",
+    "project_id": "examiner-1381f",
+    "storage_bucket": "examiner-1381f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339408757427:android:d8f21be8b9635c473d46c6",
+        "android_client_info": {
+          "package_name": "com.nixapps.examiner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339408757427-0ode2a723mf9ckplo1bvvpiud19n8ejj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXI1gfgtq1797JAK8YJpCrvflg9odWE_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339408757427-0ode2a723mf9ckplo1bvvpiud19n8ejj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
