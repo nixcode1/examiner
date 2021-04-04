@@ -1,7 +1,6 @@
 import 'package:examiner/data/controllers/quiz_controller.dart';
 import 'package:examiner/data/controllers/quiz_home_controller.dart';
 import 'package:examiner/data/services/api_service.dart';
-import 'package:examiner/data/services/fake_service.dart';
 import 'package:get/get.dart';
 
 class QuizBinding implements Bindings {

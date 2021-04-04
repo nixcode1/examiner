@@ -12,7 +12,6 @@ class QuizController extends GetxController {
   late CountDownController countDownController;
 
   final _loaded = false.obs;
-  final _hasError = false.obs;
   List<QuestionModel> questions = <QuestionModel>[].obs;
 
   QuizController({this.count, this.subject, this.hours, required this.api});

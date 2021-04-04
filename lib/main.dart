@@ -1,7 +1,6 @@
 import 'package:examiner/constants/app_theme.dart';
 import 'package:examiner/data/bindings/home_binding.dart';
 import 'package:examiner/ui/screens/homepage.dart';
-import 'package:examiner/ui/widgets/loading_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
