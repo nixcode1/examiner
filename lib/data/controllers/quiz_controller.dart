@@ -1,6 +1,7 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:examiner/data/models/question.dart';
 import 'package:examiner/data/services/api_service.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class QuizController extends GetxController {
@@ -11,6 +12,7 @@ class QuizController extends GetxController {
   late CountDownController countDownController;
 
   final _loaded = false.obs;
+  final _hasError = false.obs;
   List<QuestionModel> questions = <QuestionModel>[].obs;
 
   QuizController({this.count, this.subject, this.hours, required this.api});
@@ -31,9 +33,15 @@ class QuizController extends GetxController {
   int get duration => hours!.hours.inSeconds;
 
   void fetchQuestions() async {
-    List<QuestionModel> fetchedQuestions = await api.getQuestions("anatomy");
-    fetchedQuestions.shuffle();
-    questions = fetchedQuestions.sublist(0, count! + 1);
+    List<QuestionModel> fetchedQuestions = await api.getQuestions(subject!);
+    if (fetchedQuestions.length > count!) {
+      fetchedQuestions.shuffle();
+      questions = fetchedQuestions.sublist(0, count! + 1);
+    } else {
+      Get.snackbar("Error Generating questions",
+          "You selected more question than we currently have",
+          backgroundColor: Colors.red, duration: 4.seconds);
+    }
     print(questions);
     _loaded.value = true;
   }
