@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
         // Once complete, show your application
         if (snapshot.connectionState == ConnectionState.done) {
           return GetMaterialApp(
+            title: 'Examiner',
             debugShowCheckedModeBanner: false,
             initialRoute: Routes.INITIAL,
             initialBinding: HomeBinding(),
@@ -45,7 +46,11 @@ class MyApp extends StatelessWidget {
         }
 
         // Otherwise, show something whilst waiting for initialization to complete
-        return LoadingWidget();
+        return Container(
+          child: Center(
+            child: CircularProgressIndicator(),
+          ),
+        );
       },
     );
   }
