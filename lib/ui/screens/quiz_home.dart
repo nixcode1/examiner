@@ -116,9 +116,11 @@ class QuizHomePage extends GetView<QuizHomeController> {
                       ),
                       ElevatedButton(
                         onPressed: () => Get.toNamed(Routes.QUIZPAGE),
-                        child: Text(
-                          "Generate Questions",
-                          style: Theme.of(context).textTheme.button,
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Text(
+                            "Generate Questions",
+                          ),
                         ),
                       )
                     ],

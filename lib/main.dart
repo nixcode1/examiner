@@ -52,7 +52,6 @@ class MyApp extends StatelessWidget {
             initialBinding: HomeBinding(),
             theme: appThemeData,
             defaultTransition: Transition.fade,
-            // initialBinding: MyHomeBinding(),
             getPages: AppPages.pages,
             home: Homepage(),
           );

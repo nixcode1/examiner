@@ -31,8 +31,8 @@ dependencies:
   get: ^4.1.1
   circular_countdown_timer: ^0.2.0
   flutter_slidable: ^0.6.0-nullsafety.0
-  firebase_core: ^1.0.2
-  cloud_firestore: ^1.0.3
+  firebase_core: ^1.2.0
+  cloud_firestore: ^2.2.0
 
 dev_dependencies:
   flutter_test:
