@@ -8,17 +8,6 @@ class Homepage extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Examiner")),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => Get.bottomSheet(
-          Container(
-            width: context.width,
-            height: context.height * 0.1,
-            color: Colors.white,
-            child: TextField(),
-          ),
-        ),
-        child: Icon(Icons.add),
-      ),
       body: SafeArea(
         child: Container(
           width: context.width,
@@ -35,12 +24,7 @@ class Homepage extends GetView<HomeController> {
                     padding: const EdgeInsets.symmetric(
                         vertical: 50, horizontal: 20),
                     child: Column(
-                      children: [
-                        Text(
-                          "Theory Generator",
-                          style: Theme.of(context).textTheme.headline5,
-                        )
-                      ],
+                      children: [Text("Theory Generator", style: Theme.of(context).textTheme.headline5,)],
                     ),
                   ),
                 ),
